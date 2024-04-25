@@ -1,0 +1,7 @@
+# Here in ansible - everything will be considered as a list. so it should start with -
+- name: Pinging the remote node
+  hosts: web
+  become: yes #root user
+  tasks: #list of tasks/modules/collections
+  - name: ping the node
+    ping:
