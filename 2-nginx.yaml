@@ -1,0 +1,13 @@
+- name: Install and run Nginx
+  hosts: web
+  become: yes #root user
+  tasks: #list of tasks/modules/collections
+  - name: install nginx
+    ansible.builtin.dnf:  #If i want this to work in all distributions then use this package other wise yum or dnf
+      name: nginx
+      state: latest  # latest version it will install
+  - name: Start & Enable Nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes  # it will enable nginx service as well    
