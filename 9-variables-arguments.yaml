@@ -1,0 +1,6 @@
+- name: Passing the variables as arguments
+  hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost, we are running in that only
+  tasks: #list of tasks/modules/collections
+  - name: Access the variables while run-time
+    debug:
+      msg: "Hey I am learning {{course}} from trainer {{trainer}} with duration of {{duration}}"
