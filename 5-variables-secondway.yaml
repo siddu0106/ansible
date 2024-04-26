@@ -12,3 +12,7 @@
       duration: "20 hrs"
     debug:
       msg: "Hey I am learning {{course}} from trainer {{trainer}} with duration of {{duration}}"
+
+  - name: Play level Variable access
+    debug:
+      msg: "Hey I am learning {{course}} from trainer {{trainer}} with duration of {{duration}}"
