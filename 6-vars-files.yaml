@@ -1,6 +1,6 @@
 - name: Variables declaration in a file
   hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost, we are running in that only
-  vars-files: #list of files
+  vars_files: #list of files
   - vars.yaml
   tasks: #list of tasks/modules/collections
   - name: Access the variables from a file
