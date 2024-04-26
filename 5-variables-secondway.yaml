@@ -1,10 +1,14 @@
-- name: Variables declaration in play level first way
+- name: Variables declaration in task level second way
   hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost, we are running in that only
-  vars: # play level variable declaration
+  vars: #play level variable declaration
     course: "Ansible"
     trainer: "Sidhartha"
     duration: "120 hrs"
   tasks: #list of tasks/modules/collections
-  - name: Play level Variable access
+  - name: Task level Variable access
+    vars: #task level variable declaration
+      course: "Terraform"
+      trainer: "Siddu"
+      duration: "20 hrs"
     debug:
       msg: "Hey I am learning {{course}} from trainer {{trainer}} with duration of {{duration}}"
