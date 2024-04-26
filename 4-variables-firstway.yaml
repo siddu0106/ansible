@@ -1,0 +1,10 @@
+- name: Variables declaration in first way
+  hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost, we are running in that only
+  vars:
+    course: "Ansible"
+    trainer: "Sidhartha"
+    duration: "120 hrs"
+  tasks: #list of tasks/modules/collections
+  - name: Play level Variable access
+    debug:
+      msg: "Hey I am learning {{course}} from trainer {{trainer}} with duration of {{duration}}"
