@@ -1,0 +1,21 @@
+- name: Datatypes
+  hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost, we are running in that only
+  vars: # play level variable declaration
+    course: "Ansible"
+    duration: 120
+    tools:
+    - devops
+    - aws
+    - azure
+    - GCP
+    Experience:
+      devops: 3
+      aws: 
+      - IAM
+      - EC2
+      - Route 53
+    RealProject: true
+  tasks: #list of tasks/modules/collections
+  - name: Print all types of datatype variables
+    debug:
+      msg: "Hey I am learning {{course}} with duration of {{duration}}, I have skills like: {{tools}}, Experience in various tools: {{Experience}}"
