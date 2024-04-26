@@ -1,7 +1,7 @@
 - name: Datatypes
   hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost, we are running in that only
   vars: # play level variable declaration
-    course: "Ansible"
+    course: Ansible
     duration: 120
     tools:
     - devops
