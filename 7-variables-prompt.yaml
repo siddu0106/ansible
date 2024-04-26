@@ -1,0 +1,13 @@
+- name: Prompt the user to enter credentials and store them in variables
+  hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost, we are running in that only
+  vars_prompt: #list
+  - name: USERNAME
+    prompt: Enter your username
+    private: false
+  - name: PASSWORD
+    prompt: Enter your password
+    private: true
+  tasks: #list of tasks/modules/collections
+  - name: Prompt the user to enter values
+    debug:
+      msg: "Hey I am  trainer {{USERNAME}} and password is: {{PASSWORD}}"
