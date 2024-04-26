@@ -1,0 +1,20 @@
+- name: PLAY-1
+  hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost, we are running in that only
+  tasks: #list of tasks/modules/collections
+  - name: PLAY-1 & TASK-1
+    debug:
+      msg: "Hey I am from PLAY-1"
+
+- name: PLAY-2
+  hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost, we are running in that only
+  tasks: #list of tasks/modules/collections
+  - name: PLAY-2 & TASK-2
+    debug:
+      msg: "Hey I am from PLAY-2"
+
+- name: PLAY-3
+  hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost, we are running in that only
+  tasks: #list of tasks/modules/collections
+  - name: PLAY-3 & TASK-3
+    debug:
+      msg: "Hey I am from PLAY-3"
