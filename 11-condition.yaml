@@ -1,0 +1,13 @@
+- name: Conditions
+  hosts: web #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost
+  become: yes
+  tasks: #list of tasks/modules/collections
+  - name: Check user exist or not
+    command: id expense
+    register: USER
+    ignore_errors: true
+
+  - name: Print user info
+    debug: 
+      msg: "User info is: {{USER}}"
+  
