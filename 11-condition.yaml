@@ -11,3 +11,10 @@
     debug: 
       msg: "User info is: {{USER}}"
   
+  - name: Create User Expense
+    command: useradd expense
+    when: USER.rc != 0  #condition
+
+  - name: Print user info
+    debug: 
+      msg: "User added successfully: {{USER}}" 
