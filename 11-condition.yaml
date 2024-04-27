@@ -4,7 +4,7 @@
   tasks: #list of tasks/modules/collections
   - name: Check user exist or not
     command: id expense
-    register: USER
+    register: USER # store output of above command in USER variable
     ignore_errors: true
 
   - name: Print user info
