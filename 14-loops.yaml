@@ -1,0 +1,10 @@
+- name: print list of values using loop
+  hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost
+  tasks: #list of tasks/modules/collections
+  - name: Print values from the list
+    debug: 
+      msg: "Values are : {{item}}" # item is a reserved keyword in ansible
+    loop:
+    - devops
+    - ansible
+    - shell
