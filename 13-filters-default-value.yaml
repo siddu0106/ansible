@@ -1,0 +1,6 @@
+- name: Assign default value if we don't pass any value to the variable
+  hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost
+  tasks: #list of tasks/modules/collections
+  - name: Print number
+    debug: 
+      msg: "Enter number {{NUM | default(10)}}"
