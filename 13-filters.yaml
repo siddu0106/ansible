@@ -22,4 +22,17 @@
     vars:
       greeting: HEY
     debug: 
-      msg: "Text{{greeting | lower}}"
+      msg: "Text {{greeting | lower}}"
+
+
+- name: Remove duplicates from the list
+  hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost
+  tasks: #list of tasks/modules/collections
+  - name: remove duplicates 
+    vars:
+      Numbers: [1,2,3,4,1,4,5,6,6]
+    debug: 
+      msg: "Text {{Numbers | unique}}"
+
+
+
