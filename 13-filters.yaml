@@ -67,6 +67,7 @@
   vars:
     experience:
     - {'key': 'course', 'value': 'Devops with AWS'}
+    - trainer: "sidhartha"
   tasks: #list of tasks/modules/collections
   - name: before convert
     debug: 
