@@ -35,4 +35,13 @@
       msg: "Text {{Numbers | unique}}"
 
 
+- name: Max & Min number from the list
+  hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost
+  tasks: #list of tasks/modules/collections
+  - name: Max & Min numbers 
+    vars:
+      Numbers: [1,2,3,4,1,4,5,6,6]
+    debug: 
+      msg: "Min number is: {{Numbers | min}}, Max number is: {{Numbers | max}}"
+
 
