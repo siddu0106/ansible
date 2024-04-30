@@ -1,0 +1,16 @@
+- name: Check number is small or big
+  hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost
+  vars_prompt:
+  - name: NUM
+    prompt: Please enter number
+    private: no
+  tasks: #list of tasks/modules/collections
+  - name: number is less than 10
+    debug: 
+      msg: "Enter number {{NUM}} is less than 10"
+    when: NUM < 10
+
+  - name: number is greater than or equal to 10
+    debug: 
+      msg: "Enter number {{NUM}} is greater than or equal to 10"
+    when: NUM >= 10 
