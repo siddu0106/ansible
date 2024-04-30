@@ -10,9 +10,9 @@
   tasks: #list of tasks/modules/collections
   - name: lower to upper case
     vars:
-      greeting: hey how r u doing
+      greeting: hey
     debug: 
-      msg: "Enter number {{greeting | upper}}"
+      msg: "Text {{greeting | upper}}"
 
 
 - name: Convert text from upper case to lower case
@@ -20,6 +20,6 @@
   tasks: #list of tasks/modules/collections
   - name: upper to lower case
     vars:
-      greeting: hey how r u doing
+      greeting: HEY
     debug: 
-      msg: "Enter number {{greeting | lower}}"
+      msg: "Text{{greeting | lower}}"
