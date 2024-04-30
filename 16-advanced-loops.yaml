@@ -1,0 +1,12 @@
+- name: Install packages using loop
+  hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost
+  become: yes
+  tasks: #list of tasks/modules/collections
+  - name: Install packages from the list
+    ansible.builtin.dnf:  #If i want this to work in all distributions then use this package other wise yum or dnf
+      name: "{{item.name}}"
+      state: "{{item.state}}" 
+    loop:
+    - {name: 'mysql' state: 'latest'} #item
+    - {name: 'git' state: 'latest'}
+    - {name: 'postfix' state: 'absent'} # removing the package
