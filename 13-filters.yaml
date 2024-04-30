@@ -45,3 +45,34 @@
       msg: "Min number is: {{Numbers | min}}, Max number is: {{Numbers | max}}"
 
 
+- name: dictionary/map to items/list conversion
+  hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost
+  vars:
+    experience:
+      course: Devops with AWS
+      trainer: Sidhartha
+  tasks: #list of tasks/modules/collections
+  - name: dictionary/map to items before convert
+    debug: 
+      msg: "Before conversion: {{experience}}"
+
+  - name: dictionary/map to items after convert
+    debug: 
+      msg: "After conversion: {{experience | dict2items}}"
+
+
+
+- name: items/list to dictionary/map conversion
+  hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost
+  vars:
+    experience:
+    - course: Devops with AWS
+    - trainer: Sidhartha
+  tasks: #list of tasks/modules/collections
+  - name: before convert
+    debug: 
+      msg: "Before conversion: {{experience}}"
+
+  - name: after convert
+    debug: 
+      msg: "After conversion: {{experience | items2dict}}"
