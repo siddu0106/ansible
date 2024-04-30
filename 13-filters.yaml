@@ -66,8 +66,7 @@
   hosts: localhost #no need to declare it in inventory.ini file. Wherever we install ansible its a loaclhost
   vars:
     experience:
-    - course
-    - trainer
+    - {'key': 'course', 'value': 'Devops with AWS'}
   tasks: #list of tasks/modules/collections
   - name: before convert
     debug: 
