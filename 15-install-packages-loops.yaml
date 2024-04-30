@@ -4,7 +4,7 @@
   tasks: #list of tasks/modules/collections
   - name: Install packages from the list
     ansible.builtin.dnf:  #If i want this to work in all distributions then use this package other wise yum or dnf
-      name: {{item}}
+      name: "{{item}}"
       state: latest 
     loop:
     - mysql
