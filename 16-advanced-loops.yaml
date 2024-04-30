@@ -7,6 +7,6 @@
       name: "{{item.name}}"
       state: "{{item.state}}" 
     loop:
-    - {name: 'mysql' state: 'latest'} #item
-    - {name: 'git' state: 'latest'}
-    - {name: 'postfix' state: 'absent'} # removing the package
+    - {name: 'mysql', state: 'latest'} #item
+    - {name: 'git', state: 'latest'}
+    - {name: 'postfix', state: 'absent'} # removing the package
