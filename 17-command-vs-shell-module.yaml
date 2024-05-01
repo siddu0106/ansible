@@ -3,3 +3,6 @@
   tasks: #list of tasks/modules/collections
   - name: command module
     command: echo "Hey siddu" > /tmp/sid.txt
+
+  - name: Shell module
+    shell: echo "Hey siddu" > /tmp/sid.txt
