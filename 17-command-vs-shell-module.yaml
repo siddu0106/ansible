@@ -1,0 +1,5 @@
+- name: Command vs Shell module
+  hosts: localhost 
+  tasks: #list of tasks/modules/collections
+  - name: command module
+    command: echo "Hey siddu" > /tmp/sid.txt
